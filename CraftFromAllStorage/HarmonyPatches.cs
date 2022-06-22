@@ -100,8 +100,8 @@ class SetAmountInInventoryPatch
 // * Attempting to craft 2/6 nails crashes the client to desktop, possibly because I only have 3/2 scrap?
 // */
 
-[HarmonyPatch(typeof(PlayerInventory), "RemoveCostMultiple")]
-class RemoveCost
+[HarmonyPatch(typeof(Inventory), "RemoveCostMultiple")]
+class RemoveCostMultiple
 {
     static bool Prefix(CostMultiple[] costMultiple)
     {
